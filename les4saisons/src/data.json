@@ -1,0 +1,23 @@
+{
+    "seasons" : {
+        "winter": {
+        "name": "winter",
+        "dateDeb": "2021-12-21",
+        "dateFin": "2022-03-19"
+    },
+    "spring": {
+        "name": "spring",
+        "dateDeb": "2022-03-20",
+        "dateFin": "2022-06-20"
+    },
+    "summer": {
+        "name": "summer",
+        "dateDeb": "2022-06-21",
+        "dateFin": "2022-09-22"
+    },
+    "autumn": {
+        "name": "autumn",
+        "dateDeb": "2022-09-23",
+        "dateFin": "2022-12-20"
+    }
+}}
