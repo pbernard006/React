@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import Modal from "./components/Modal";
 
-import NextSeason from "./components/NextSeason";
+//import NextSeason from "./components/NextSeason";
 import Season from "./components/Season" ;
 import data from "./data.json"
 

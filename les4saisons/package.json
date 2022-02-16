@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "license": "MIT",
   "source": "src/index.html",
-  "scripts" : {
+  "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "rimraf dist && parcel build"
   },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "parcel": "^2.2.1"
+    "@parcel/reporter-bundle-analyzer": "^2.3.1",
+    "parcel": "^2.3.0",
+    "rimraf": "^3.0.2"
   }
 }
