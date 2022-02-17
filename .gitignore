@@ -1,3 +1,6 @@
 ##PARCEL##
-parcel-bundle-reports
-dist
+les4saisons/parcel-bundle-reports
+les4saisons/dist
+
+## .ENV ##
+films/.env
