@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       
       <BrowserRouter>
-      <Link to="/">Home</Link>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/movies/:id' element={<Movie/>}/>
