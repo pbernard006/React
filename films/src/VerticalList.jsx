@@ -18,4 +18,8 @@ function VerticalList({ data }) {
   );
 }
 
+VerticalList.defaultProps = {
+  data: [],
+};
+
 export default VerticalList;

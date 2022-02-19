@@ -8,7 +8,7 @@ import HorizontalList from "./HorizontalList";
 
 const OVERVIEW_SIZE = 120;
 
-function Movie(){
+function Movie({poster_path, title}){
 
     const {id} = useParams();
 
@@ -23,7 +23,7 @@ function Movie(){
       );
       console.log(suggestions);
     const releaseDate = new Intl.DateTimeFormat("fr", { dateStyle: "long" }).format(new Date(movie.release_date))
-    const image = "https://image.tmdb.org/t/p/w92" + movie.poster_path ;
+    const image = `https://image.tmdb.org/t/p/w92${movie.poster_path}`;;
     return(
         <div>
             <div className="row">

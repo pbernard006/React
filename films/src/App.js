@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
+  
+  console.log("env : "+process.env.REACT_APP_API_KEY)
   return (
     <div className="App container">
       
