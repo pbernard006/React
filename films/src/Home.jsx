@@ -13,7 +13,7 @@ function buildUrl(value) {
 }
 
 
-function Home() {
+function Home({ addToFavorite, favorites }) {
   const [searchParams, setSearchParams] = useSearchParams();
   
   const [value, setValue] = useState(searchParams.get("q") ? searchParams.get("q") : '');
@@ -36,7 +36,7 @@ function Home() {
         {error && <div>{error}</div>}
         {(isLoading || isFetching) && <div>Loading movies...</div>}
       {!isLoading && !error && (
-        <VerticalList data={data?.results} />
+        <VerticalList data={data?.results} addToFavorite={addToFavorite} favorites={favorites}/>
       )}
     </div>
   );

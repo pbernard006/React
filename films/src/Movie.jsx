@@ -8,7 +8,7 @@ import HorizontalList from "./HorizontalList";
 
 const OVERVIEW_SIZE = 120;
 
-function Movie({poster_path, title}){
+function Movie({addToFavorite, favorites}){
 
     const {id} = useParams();
 
@@ -72,7 +72,7 @@ function Movie({poster_path, title}){
                 </div>
                 <div className="col-12 mt-4">
                     <h6>Contenu similaire</h6>
-                    <HorizontalList data={suggestions}/>
+                    <HorizontalList data={suggestions} addToFavorite={addToFavorite} favorites={favorites}/>
                 </div>
             </div>
             
