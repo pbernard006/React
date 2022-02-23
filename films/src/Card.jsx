@@ -1,5 +1,14 @@
-function Card({ poster_path, title, id, addToFavorite, favorites }) {
+import { useDispatch, useSelector } from "react-redux";
+import { favoritesSlice } from "./slices";
+
+function Card({ poster_path, title, id}) {
     const imageURL = poster_path && `https://image.tmdb.org/t/p/w92${poster_path}`;;
+    const favorites = useSelector((state) => state.favorites);
+    const dispatch = useDispatch();
+    const addToFavorite = (event) => {
+    event.preventDefault();
+    dispatch(favoritesSlice.actions.toggle({ id }));
+  };
     return (
     <div>
         <div className="text-center">
@@ -7,17 +16,12 @@ function Card({ poster_path, title, id, addToFavorite, favorites }) {
                 <img src={imageURL} className="img-fluid"></img>
             </div>
             <span>{title}</span>
-            <button onClick={addToFavorite(id)}>
+            <button onClick={addToFavorite}>
                 ♥
             </button>
         </div>
     </div>
     );
   }
-
-  Card.defaultProps = {
-    favorites: [],
-    addToFavorite: Function.prototype,
-  };
 
 export default Card ;

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
-function Header({ favorites })
+function Header()
 {
+    const favorites = useSelector((state) => state.favorites);
     return (
         <div className="container-fluid bg-dark">
             <div className="row">

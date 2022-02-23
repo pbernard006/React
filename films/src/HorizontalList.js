@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Card from "./Card";
 import Movie from "./Movie";
 
-function HorizontalList({data, addToFavorite, favorites}){
+function HorizontalList({data}){
     return (
         <div className="row">
             {data.slice(0,3).map((entry) => (

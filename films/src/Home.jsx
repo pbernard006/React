@@ -13,7 +13,7 @@ function buildUrl(value) {
 }
 
 
-function Home({ addToFavorite, favorites }) {
+function Home() {
   const [searchParams, setSearchParams] = useSearchParams();
   
   const [value, setValue] = useState(searchParams.get("q") ? searchParams.get("q") : '');
@@ -24,11 +24,10 @@ function Home({ addToFavorite, favorites }) {
     },
     [setSearchParams]);
 
-    const { data, isLoading, isFetching, error } = useQuery("movies", () =>
-    fetch(buildUrl(value)).then((response) => response.json())
+    const { data, isLoading, isFetching, error } = useQuery(
+      ["movies", value],
+      () => fetch(buildUrl(value)).then((response) => response.json())
   );
-  
-  
 
   return (
     <div>
@@ -36,7 +35,7 @@ function Home({ addToFavorite, favorites }) {
         {error && <div>{error}</div>}
         {(isLoading || isFetching) && <div>Loading movies...</div>}
       {!isLoading && !error && (
-        <VerticalList data={data?.results} addToFavorite={addToFavorite} favorites={favorites}/>
+        <VerticalList data={data?.results}/>
       )}
     </div>
   );
