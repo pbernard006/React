@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { favoritesSlice } from "./slices";
 
 function Card({ poster_path, title, id}) {
-    const imageURL = poster_path && `https://image.tmdb.org/t/p/w92${poster_path}`;;
-    const favorites = useSelector((state) => state.favorites);
+    const imageURL = poster_path && `https://image.tmdb.org/t/p/w92${poster_path}`;
+    console.log(imageURL);
     const dispatch = useDispatch();
     const addToFavorite = (event) => {
     event.preventDefault();
